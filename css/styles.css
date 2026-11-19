@@ -1,0 +1,46 @@
+/* Full-screen layout */
+html, body { margin: 0; padding: 0; height: 100%; width: 100%; }
+#map { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+.leaflet-container { font-size: 1rem; }
+
+/* Soft two-tone cluster badges (color = highest hazard among the clustered sites) */
+.risk-cluster { background: transparent; border: none; }
+.risk-cluster-outer {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
+.risk-cluster-inner {
+  width: 30px; height: 30px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font: bold 13px Arial, Helvetica, sans-serif;
+}
+
+/* Layers menu panel */
+.leaflet-control-layers {
+  border: none !important;
+  border-radius: 6px !important;
+  background: rgba(255,255,255,0.92) !important;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.35) !important;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.leaflet-control-layers-expanded { padding: 10px 14px; }
+.leaflet-control-layers-list label { font-size: 13px; line-height: 1.7; cursor: pointer; }
+.leaflet-control-layers-separator { margin: 6px 0; }
+
+/* Legend */
+.info.legend {
+  background: rgba(255,255,255,0.92);
+  padding: 10px 14px;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.35);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+.info.legend h4 { margin: 0 0 6px 0; font-size: 14px; }
+.info.legend .row { display: flex; align-items: center; }
+.info.legend .swatch {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 1px solid #333; display: inline-block; margin-right: 8px;
+}
+.info.legend b { font-size: 13px; }
